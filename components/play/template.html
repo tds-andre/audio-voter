@@ -1,0 +1,41 @@
+<style>
+	.app-play.selected .card{
+		background-color: #007bff
+	}	
+
+    .app-play.selected .card{
+        background-color: #007bff;
+        color: white;
+    }
+
+    .app-play .material-icons{
+        font-size: 132px;
+        cursor: pointer;
+    }
+
+    .app-play .material-icons{
+        font-size: 132px;
+        cursor: pointer;
+    }
+
+    .app-play .material-icons:hover{
+        color: #007bff;
+    }
+
+    .app-play button{
+        cursor: pointer;
+    }    
+</style>
+
+<script type="text/template" id="play-template">
+    <div class="card" style="width: 20rem;">
+        <div class="card-body text-center">
+            <i class="material-icons js-play">play_circle_outline</i>
+
+            <p><%- name %></p>
+            <button type="button" class="js-select btn btn-outline-primary">Este é melhor</button>
+      
+     
+        </div>
+    </div>
+</script>

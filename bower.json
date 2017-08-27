@@ -1,0 +1,27 @@
+{
+  "name": "audio-voter",
+  "authors": [
+    "André Teixeira dos Santos <tds.andre@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "backbone.marionette": "marionette#^3.4.2",
+    "svg-icon-webcomponent": "https://github.com/frexy/svg-icon-webcomponent.git",
+    "glyph-iconset": "https://github.com/frexy/glyph-iconset.git",
+    "material-design-icons": "http://github.com/google/material-design-icons",
+    "backbone": "^1.3.3"
+  }
+}
