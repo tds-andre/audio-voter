@@ -37,6 +37,6 @@
 		echo 'Erro: ' .$e->getMessage();
 	}
 	
-	
+	echo "ok"
 	
 ?>
