@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Teste Subjetivo para Síntese de Voz</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -33,7 +33,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">Teste Subjetivo para Síntese de Voz</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p>Abaixo são apresentados 20 pares de áudios. Os aúdios vieram de 2 sintetizadores diferentes (diferentes topologias de redes neurais). O objetivo do teste é descobrir qual sintetizador é melhor! Então, para isso, voce de votar, para cada par, qual aúdio é melhor (ou neutro, mas tente evitar). Divirta-se! </p>
        
       </div>
     </div>
@@ -67,6 +67,7 @@
 
 
     <script src="config.js"></script>
+    <script src="router.js"></script>
     <script src="app.js"></script>   
 
   </body>

@@ -26,7 +26,7 @@ var VotationView = Mn.View.extend({
 		Backbone.$.ajax({
 			url: "vote.php",
 			type: "post",
-			data: {uuid: localStorage.getItem("uuid"), data: JSON.stringify(data)},//JSON.stringify(data),
+			data: {uuid: app.retrieveUUID(), data: JSON.stringify(data)},//JSON.stringify(data),
 			//dataType: "json",
 			//contentType: "application/json",
 			success: () => self.thankYou()
@@ -39,8 +39,7 @@ var VotationView = Mn.View.extend({
 	},
 	
 	onChildviewSelect: function(){
-		
-		localStorage.setItem(config.matchup, JSON.stringify(this.storage))
+		app.saveMatchup(this.storage);		
 	},
 
 	onRender: function(){
@@ -55,9 +54,14 @@ var VotationView = Mn.View.extend({
 	  			return Math.floor(Math.random() * (max - min)) + min; 
 			};
 
-		this.storage = {a: a, b: b};
+		if(!this.options.dunno){
+			var dunno = a.map(el => new Backbone.Model())
+		}else
+			var dunno = this.options.dunno.models;
 
-		a.forEach( (d, index) => {collection.push({a: a[index], b: b[index]})})
+		this.storage = {a: a, b: b, dunno: dunno};
+
+		a.forEach( (d, index) => {collection.push({a: a[index], b: b[index], dunno: dunno[index]})})
 
 		//collection.sort(randomizer);
 		this.collection = new Backbone.Collection(collection);
@@ -72,5 +76,12 @@ var VotationStub = Mn.CollectionView.extend({
 	childView: PairView,
 	childViewTriggers:{
 		"select": "select"
+	},
+
+	onChildviewPlay: function(audio){
+		if(this.audio){
+			this.audio.pause();			
+		}
+		this.audio = audio;		
 	}
 })

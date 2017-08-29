@@ -2,7 +2,7 @@
 	//$jsonReceiveData = json_encode($_POST);
     //echo $jsonReceiveData;
 
-	$dir = 'myDir';
+	$dir = 'votes';
 
 	 // create new directory with 744 permissions if it does not exist yet
 	 // owner will be the user/group the PHP script is run under

@@ -1,18 +1,8 @@
 var config = config || {}
 
+config.debug = true;
 
-
-config.a = {
-	name: "8 de 1024",
-	dir: "audios/8 de 1024/"
-}
-
-config.b = {
-	name: "8 de 512",
-	dir: "audios/8 de 512/"
-}
-
-config.matchup = config.a.name + config.b.name
+config.basedir = "../audios/";
 
 config.extension = ".wav"
 

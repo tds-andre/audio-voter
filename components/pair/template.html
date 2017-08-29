@@ -3,6 +3,11 @@
 		margin-top: 100px;
 	}
 
+	.app-pair-button{
+		cursor: pointer;
+		margin-top: 5px;
+	}
+
 	.js-2{
 		z-index: -3;		
 	}
@@ -15,17 +20,31 @@
  		.js-2, .js-3{
 			background-color: white;
 		}
+		.app-pair-button{		
+			margin-left:0px;
+		}
 	}
 
 </style>
 
  <script type="text/template" id="pair-template">
-      		<div class="col-md-5 js-left-el">
-                
-            </div>
+      		<div class="col">
+	      		<div class="row">
+		      		<div class="col-md-5 js-left-el">
+		                
+		            </div>
 
-            <div class="js-2 col-md-2"></div>
-            <div class="js-3 col-md-5 js-right-el">
-              
-            </div>
+		            <div class="js-2 col-md-2">
+		            	
+		            </div>
+		            <div class="js-3 col-md-5 js-right-el">
+		              
+		            </div>
+		        </div>
+		        <div class="row">
+		        	<div class="col">
+		        		 <button  type="button" class="app-pair-button js-dunno btn btn-outline-secondary">Não sei =(</button>
+		        	</div>
+		        </div>
+		    </div>
 </script>

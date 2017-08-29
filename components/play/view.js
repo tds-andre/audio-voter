@@ -22,6 +22,10 @@ var PlayView = Mn.View.extend({
 			this.toggle();
 	},
 
+	templateContext: function(){
+		return {cap: config.debug ? this.model.get("name") : ""}
+	},
+
 	toggle: function(){
 		this.ui.select.toggleClass("active")
 		//this.$el.toggleClass("selected")
@@ -30,6 +34,7 @@ var PlayView = Mn.View.extend({
 	onPlay: function(){
 		var audio = new Audio(this.model.get("name"));
 		audio.play();
+		this.trigger("play", audio)
 	},
 
 	onSelect: function(){
